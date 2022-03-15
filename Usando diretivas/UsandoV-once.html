@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <title>Desabilitando novas renderizações com v-once</title>
+</head>
+<body>
+    <div id="app">
+        <p v-once>Meu nome completo é  <strong>{{nome}}</strong></p>
+        <p>Meu sobre nome é <strong> {{getNome()}}</strong></p>
+    </div>
+    <script type="text/javaScript">
+        new Vue({
+            el:'#app',
+            data:{
+                nome:'Edivan Dos Santos Oliveira',  
+            },
+            methods:{
+                getNome:function () {
+                    this.nome = 'Oliveira' // alterando o nome
+                    return this.nome;
+                }
+            }
+        });
+    </script>
+</body>
+</html>
