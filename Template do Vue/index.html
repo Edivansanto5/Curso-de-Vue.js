@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <title>Criando um Template no Vue.js</title>
+</head>
+<body>
+    <div id="app">
+        <h1>Agora e a hora de estudar {{curso}}</h1>
+        <p>Meu nome é {{nome}} e tenho {{ idade}} anos </p>
+    </div>
+   
+
+    <div id="app">
+    <script type="text/javaScript">
+        new Vue({
+            el:'#app',
+            data:{
+                nome:'Marcos dos santos oliveira',
+                curso:'Vue.js',
+                idade2:33,
+            },
+        });
+
+    </script>
+    
+</body>
+</html>
