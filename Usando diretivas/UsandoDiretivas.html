@@ -4,9 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+    <title>Usando Diretivas no v-binding </title>
 </head>
 <body>
+    <div id="app">
+        <p> Bem-Vindo ao  <strong> {{nomeDoCurso}} </strong></p>
+        <h3>Para mais informação entre na documentação do <a :href="docs">Vue.js</a></h3>
+        <h3>Para mais informação entre na documentação do <a v-binding :href="docs">Vue.js</a></h3>
+
+        <p>Meu sobre nome é <strong v-text="nome"></strong></p> 
+        <p> Meu sobre nome é <strong>{{nome}}</strong></p>
+        <!--Notem que das duas maneiras dar certo e o resultado e o mesmo acima -->
+    </div>
+
+    <script type="text/javaScript">
+        new Vue({
+            el:'#app',
+            data:{
+                nomeDoCurso:'Curso de Vue.js completo do Básico ao avançado',
+                docs:'https://br.vuejs.org/v2/guide/index.html',
+                nome:'Mariana de fatima da silva'
+            }
+        });
+
+    </script>
     
 </body>
 </html>
