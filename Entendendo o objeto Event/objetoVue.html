@@ -10,10 +10,27 @@
 </head>
 <body>
     <div id="app">
-        <button>Adcionar</button>
-        <button>Remover</button>
+        <button v-on:click="getAdcionar">Adcionar</button>
+        <button v-on:click="getRemove">Remover</button>
+        <p>Voce apertou {{contador}} vezes !</p>
     </div>
     <script>
+        new Vue({
+            el:'#app',
+            data:{
+                contador: 0
+            },
+            methods:{
+                getAdcionar: function(event){
+                    this.contador++
+                    console.log(event)
+                },
+                getRemove: function(event){
+                    this.contador--
+                    console.log(event)
+                }
+            }
+        })
 
     </script>
     
