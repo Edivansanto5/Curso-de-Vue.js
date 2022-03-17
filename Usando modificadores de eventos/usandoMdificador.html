@@ -9,8 +9,8 @@
 </head>
 <body>
     <div id="app">
-        <p v-on:click="onclick('p',$event)">Curso de {{curso}}
-            <button v-on:click="onclick('button',$event)">Enviar</button>
+        <p v-on:click="onclick('clicou no paragrafo',$event)">Curso de {{curso}}
+            <button v-on:click.stop="onclick('apertou no botão',$event)">Enviar</button>
         </p>
     </div>
 
@@ -22,7 +22,7 @@
             },
             methods:{
                 onclick: function(elemenoAlvo, event){
-                    event.stopPropagation()
+                    //event.stopPropagation()
                     console.log(event.type,':',elemenoAlvo)
                 }
             }
