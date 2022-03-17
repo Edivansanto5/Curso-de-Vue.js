@@ -22,7 +22,8 @@
             <label for="">nome da cidade</label>
             <input type="text"><br><br>
 
-            <button type="submit">Enviar</button>
+            <button type="submit" v-on:click="onSubmit">Enviar sem modificador</button>
+            <button type="submit" v-on:click="onSubmit">Enviar com modificador</button>
         </form>
     </div>
 
