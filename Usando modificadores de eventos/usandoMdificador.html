@@ -12,6 +12,18 @@
         <p v-on:click="onclick('clicou no paragrafo',$event)">Curso de {{curso}}
             <button v-on:click.stop="onclick('apertou no botão',$event)">Enviar</button>
         </p>
+        <form >
+            <label for="">cidade</label>
+            <input type="text"><br><br>
+
+            <label for="">estado</label>
+            <input type="text"><br><br>
+
+            <label for="">nome da cidade</label>
+            <input type="text"><br><br>
+
+            <button type="submit">Enviar</button>
+        </form>
     </div>
 
     <script>
