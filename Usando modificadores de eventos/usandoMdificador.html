@@ -22,6 +22,7 @@
             },
             methods:{
                 onclick: function(elemenoAlvo, event){
+                    event.stopPropagation()
                     console.log(event.type,':',elemenoAlvo)
                 }
             }
