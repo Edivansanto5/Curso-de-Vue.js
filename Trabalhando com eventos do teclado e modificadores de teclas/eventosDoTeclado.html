@@ -4,16 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="estio.css">
     <title>Trabalhando com eventos do teclado e modificadores de teclas</title>
 </head>
 <body>
     <div id="app">
         <form >
-            <label for="">Formulario de Dados Pessoal</label>
-            <input placeholder="Aperte Qualquer tecla">
+            <label>Formulario de Dados Pessoal</label>
+            <br>
+            <input v-on:keyup="onkey" placeholder="Aperte Qualquer tecla">
+            <br><br>
+            <input v-on:keyup.enter="onkey" placeholder="Aperte apenas o Enter">
+            <br><br>
+            <input v-on:keyup.enter.ctrl="onkey"placeholder="Aperte Ctrl + Enter">
+
 
         </form>
     </div>
+    <script>
+        new Vue({
+            el:'#app',
+            methods:{
+                onkey:function(event){
+                    console.log(' Tecla ' + event.key + ' precionanda ')
+                }
+            }
+
+        });
+    </script>
     
 </body>
 </html>
