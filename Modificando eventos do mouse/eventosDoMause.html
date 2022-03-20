@@ -9,9 +9,14 @@
 </head>
 <body>
     <div id="app">
-        <button v-on:click.left="onClick">Botao esquerdo</button>
-        <button v-on:click.middle="onClick">Botao Direito</button>
-        <button v-on:click.right="onClick">Botão do meio</button>
+        <h3>Aperte os Botões do mause </h3>
+        <button v-on:click.left="onClick">Botao Esquerdo</button>
+        <br><br>
+        <button v-on:click.middle="onClick">Botao Do meio</button>
+        <br><br>
+        <button v-on:click.right="onClick">Botão Direito</button>
+        <br><br>
+        <button  v-on:click.right.prevent="onClick">Botão Direito sem contexto</button>
     </div>
     <script>
         new Vue({
