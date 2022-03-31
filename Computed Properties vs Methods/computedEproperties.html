@@ -19,6 +19,11 @@
             el:'#app',
             data:{
                 docs:'https://br.vuejs.org/'
+            },
+            methods:{
+                onClick:function(event){
+                    console.log('Aperto ',event.type + ' apertou ')
+                }
             }
         });
     </script>
