@@ -14,7 +14,7 @@
         <button @click="onclick">Aperte</button>
         <hr>
         <p>Curso de {{curso}} => {{curso.split('').reverse().join('')}}</p>
-
+        <h3>Curso de Vue.js 2022 </h3>
 
     </div>
     
@@ -29,7 +29,11 @@
                 onclick : function(event){
                     console.log('voce apertou o boão de  ', event.type, 'tantas vezes ')
                 }
+            },
+            computed:{
+                
             }
+
         });
     </script>
     
