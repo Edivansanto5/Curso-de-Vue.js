@@ -12,6 +12,8 @@
         <p>Ir para documentaçao do vue.js</p>
         <a :href="docs">Vue.js</a>
         <button @click="onclick">Aperte</button>
+        <hr>
+        <p>Curso de {{curso}} => {{curso.split('').reverse().join('')}}</p>
 
 
     </div>
@@ -20,7 +22,8 @@
         new Vue({
             el:'#app',
             data:{
-                docs:'https://br.vuejs.org/v2/guide/index.html'
+                docs:'https://br.vuejs.org/v2/guide/index.html',
+                curso:'Vue.js'
             },
             methods:{
                 onclick : function(event){
