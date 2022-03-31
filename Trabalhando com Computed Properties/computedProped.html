@@ -13,8 +13,9 @@
         <a :href="docs">Vue.js</a>
         <button @click="onclick">Aperte</button>
         <hr>
-        <p>Curso de {{curso}} => {{curso.split('').reverse().join('')}}</p>
-        <h3>Curso de Vue.js 2022 </h3>
+        <h3>Curso de {{curso}} => {{curso.split('').reverse().join('')}}</h3>
+        <hr>
+        <h3>curso de {{inverter}}</h3>
 
     </div>
     
@@ -31,7 +32,9 @@
                 }
             },
             computed:{
-                
+                inverter:function(){
+                   return this.curso.split('').reverse('').join('')
+                }
             }
 
         });
