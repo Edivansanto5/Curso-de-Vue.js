@@ -16,6 +16,7 @@
         <h3>Curso de {{curso}} => {{curso.split('').reverse().join('')}}</h3>
         <hr>
         <h3>curso de {{inverter}}</h3>
+        <input @keyup.enter="alterarNomeDoCuro">
 
     </div>
     
@@ -29,6 +30,10 @@
             methods:{
                 onclick : function(event){
                     console.log('voce apertou o boão de  ', event.type, 'tantas vezes ')
+                },
+                alterarNomeDoCuro : function(event){
+                    this.curso = event.target.value
+
                 }
             },
             computed:{
