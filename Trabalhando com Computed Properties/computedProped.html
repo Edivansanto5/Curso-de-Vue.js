@@ -9,19 +9,26 @@
 </head>
 <body>
     <div id="app">
+        <p>Ir para documentaçao do vue.js</p>
         <a :href="docs">Vue.js</a>
         <button @click="onclick">Aperte</button>
 
-        <script>
-            new Veu({
-                el:'#app',
-                data:{
-                    docs:'https://br.vuejs.org/v2/guide/index.html'
-                }
-            });
-        </script>
 
     </div>
+    
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                docs:'https://br.vuejs.org/v2/guide/index.html'
+            },
+            methods:{
+                onclick : function(event){
+                    console.log('voce apertou o boão de  ', event.type, 'tantas vezes ')
+                }
+            }
+        });
+    </script>
     
 </body>
 </html>
