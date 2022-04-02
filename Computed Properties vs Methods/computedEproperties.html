@@ -11,18 +11,30 @@
     <div id="app">
         <a :href="docs"curso de >Vue.js</a>
         <button @click="onClick">Aperte</button>
+        <p>Curso de {{curso}} => {{inverteNome}}</p>
+        <a :href="docs"curso de >Vue.js</a>
+        <button @click="onClick">Aperte </button>
+        <p>Curso de {{curso }} => {{curso.split('').reverse('').join('')}}</p>
         <hr>
+
     </div>
 
     <script>
         new Vue({
             el:'#app',
             data:{
-                docs:'https://br.vuejs.org/'
+                docs:'https://br.vuejs.org/',
+                curso:'Matemáica financeira',
+                ma:'seila'
             },
             methods:{
                 onClick:function(event){
                     console.log('Aperto ',event.type + ' apertou ')
+                }
+            },
+            computed:{
+                inverteNome:function(){
+                    return this.curso.split('').reverse().join('')
                 }
             }
         });
