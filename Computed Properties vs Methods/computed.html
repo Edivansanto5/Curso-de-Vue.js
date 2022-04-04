@@ -10,10 +10,10 @@
 <body>
     <div id="app">
         <p> Nome Original:{{curso}} </p>
-        <p> Nome invertedoComputed : {{nomeInverterComputed}}</p>
-        <p> Nome invertedoComputed : {{nomeInverterMethods}}</p>
+        <p> Nome invertido com computed : {{nomeInverterComputed}}</p>
+        <p> Nome invertido com Methods : {{nomeInverterMethods()}}</p>
         <p> Autor : {{nomeDoAutor ? 'Edivan santos': 'Vanzim Oliveira'}}</p>
-        <button>Alterar nome do Autor</button>
+        <button @click="nomeDoAutor = !nomeDoAutor">Alterar nome do Autor</button>
         <hr>
         <input @Keyup.enter="alterarNome" placeholder="Digite aqui">
     </div>
@@ -23,7 +23,8 @@
             el:'#app',
             data:{
                 curso:'História Geral',
-                docs:'https://br.vuejs.org/'
+                docs:'https://br.vuejs.org/',
+                nomeDoAutor:false,
             },
             computed:{
                 nomeInverterComputed:function(){
@@ -33,10 +34,10 @@
             },
             methods:{
                 alterarNome : function(event){
-                    console.log('usando Methods')
                     return this.curso = event.target.value
                 },
                 nomeInverterMethods:function(){
+                    console.log('usando Methods')
                     return this.curso.split('').reverse().join('')
                 }
             }
