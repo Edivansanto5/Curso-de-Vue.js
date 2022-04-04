@@ -10,7 +10,7 @@
 <body>
     <div id="app">
         <p><strong>{{curso}}</strong> para mais infomações entre no link <a :href="docs">Vue.js</a></p>
-        <button>Aperte</button>
+        <button @click="onclick">Aperte</button>
     </div>
 
     <script>
@@ -19,6 +19,11 @@
             data:{
                 curso:'Vue.js:',
                 docs:'https://br.vuejs.org/'
+            },
+            methods:{
+                onclick : function(event){
+                    console.log('apertou o metado ',event.type,'Vezes ')
+                }
             }
         })
     </script>
