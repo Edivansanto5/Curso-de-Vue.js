@@ -9,22 +9,30 @@
 </head>
 <body>
     <div id="app">
-        <p><strong>{{curso}}</strong> para mais infomações entre no link <a :href="docs">Vue.js</a></p>
-        <button @click="onclick">Aperte</button>
+        <p>{{curso}} => {{curso.split('').reverse().join('')}}</p>
+        <p>{{curso}} => {{inverterNome}}</p>
+        <input @Keyup.enter="alterarNome">
     </div>
 
     <script>
         new Vue({
             el:'#app',
             data:{
-                curso:'Vue.js:',
+                curso:'História Geral',
                 docs:'https://br.vuejs.org/'
             },
+            computed:{
+                inverterNome:function(){
+                    return this.curso.split('').reverse().join('')
+                }
+            },
             methods:{
-                onclick : function(event){
-                    console.log('apertou o metado ',event.type,'Vezes ')
+                alterarNome : function(event){
+                    return this.curso = event.target.value
                 }
             }
+            
+
         })
     </script>
 
