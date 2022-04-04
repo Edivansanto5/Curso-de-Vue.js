@@ -4,11 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@2.6.14/dist/vue.js"></script>
     <title>usando propt e  computed</title>
 </head>
 <body>
     <div id="app">
-        <a :href="docs">Vue</a>
+        <p>{{curso}} para mais infomações entre no link <a :href="docs">Vue.js</a></p>
     </div>
+
+    <script>
+        new Vue({
+            el:'#app',
+            data:{
+                curso:'Vue.js:',
+                docs:'https://br.vuejs.org/'
+            }
+        })
+    </script>
+    
 </body>
 </html>
