@@ -9,8 +9,9 @@
 </head>
 <body>
     <div id="app">
-        <p>{{curso}} => {{curso.split('').reverse().join('')}}</p>
-        <p>{{curso}} => {{inverterNome}}</p>
+        <p> Nome Original:{{curso}} </p>
+        <p> Nome invertedoComputed : {{nomeInverterComputed}}</p>
+        <p> Nome invertedoComputed : {{nomeInverterMethods}}</p>
         <input @Keyup.enter="alterarNome">
     </div>
 
@@ -22,13 +23,16 @@
                 docs:'https://br.vuejs.org/'
             },
             computed:{
-                inverterNome:function(){
+                nomeInverterComputed:function(){
                     return this.curso.split('').reverse().join('')
                 }
             },
             methods:{
                 alterarNome : function(event){
                     return this.curso = event.target.value
+                },
+                nomeInverterMethods:function(){
+                    return this.curso.split('').reverse().join('')
                 }
             }
             
