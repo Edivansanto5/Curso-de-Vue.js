@@ -29,9 +29,11 @@
             },
             methods:{
                 alterarNome : function(event){
+                    console.log('usando Methods')
                     return this.curso = event.target.value
                 },
                 nomeInverterMethods:function(){
+                    console.log('usando Methods')
                     return this.curso.split('').reverse().join('')
                 }
             }
