@@ -24,12 +24,12 @@
             },
             computed:{
                 nomeInverterComputed:function(){
+                    console.log('usando Methods')
                     return this.curso.split('').reverse().join('')
                 }
             },
             methods:{
                 alterarNome : function(event){
-                    console.log('usando Methods')
                     return this.curso = event.target.value
                 },
                 nomeInverterMethods:function(){
