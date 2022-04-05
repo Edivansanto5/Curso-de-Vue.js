@@ -9,9 +9,12 @@
 </head>
 <body>
     <div id="app">
-        <p>Primeiro Nome:{{primeiroNome}}</p>
-        <p>Segundo Nome:{{segundoNome}}</p>
-        <p>Nome Completo:{{nomeCompleto}}</p>
+        <p>Primeiro Nome:{{nomeCompleto}}</p>
+        <!--
+           <p>Segundo Nome:{{segundoNome}}</p>
+           <p>Nome Completo:{{nomeCompleto}}</p>
+         -->
+         <button @click="alterarNome">alterar Nome</button>
     </div>
     <script type="text/javascript">
         new Vue({
@@ -23,7 +26,16 @@
             },
             watch:{
                 primeiroNome:function(novoPrimeiroNome,antigoPrimeiroNome){
-                     
+                    this.primeiroNome = novoPrimeiroNome + ' ' + this.segundoNome 
+                },
+                segundoNome:function(novoUltimoNome,antigoUltimoNome){
+                    this.nomeCompleto = this.PrimeiroNome + ' ' + this.novoUltimoNome
+                }
+            },
+            methods:{
+                alterarNome:function(){
+                    this.PrimeiroNome = 'Santos'
+                    this.segundoNome = 'Edivan'
                 }
             }
         })
