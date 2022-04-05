@@ -11,7 +11,7 @@
     <div id="app">
         <p>Primeiro Nome:{{primeiroNome}}</p>
         <p>Segundo Nome:{{segundoNome}}</p>
-        <p> nomeCompleto:{{nomeCompleto}}</p>
+        <p>Nome Completo:{{nomeCompleto}}</p>
     </div>
     <script type="text/javascript">
         new Vue({
@@ -20,6 +20,11 @@
                 primeiroNome:'Edivan',
                 segundoNome:'Santos',
                 nomeCompleto:'Edivan dos Santos Oliveira'
+            },
+            watch:{
+                primeiroNome:function(novoPrimeiroNome,antigoPrimeiroNome){
+                     
+                }
             }
         })
 
